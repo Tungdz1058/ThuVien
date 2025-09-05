@@ -1,14 +1,29 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ThuVien.Interfaces;
 
 namespace ThuVien
 {
+
     public class Program
     {
+        static void them(List<List<TaiLieu>> n)
+        {
+            Console.WriteLine("vui long nhap ten sach moi : ");
+            string name = Console.ReadLine();
+            Console.WriteLine("vui long nhap ten tac gia moi : ");
+            string tacgia = Console.ReadLine();
+            Console.WriteLine("vui long nhap noi dung sach moi : ");
+            string content = Console.ReadLine();
+            Console.WriteLine("vui long nhap ngay san xuat sach moi : ");
+            string date = Console.ReadLine();
+
+            n[0].Add(new Sach(name, tacgia, content, date));
+        }
         static void Main(string[] args)
         {
             List<List<TaiLieu>> n = new List<List<TaiLieu>>();
