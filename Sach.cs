@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +30,24 @@ namespace ThuVien
             Console.WriteLine($"thuc hien ma hoa sach boi tac gia {tac_gia}");
         }
 
-        public void read()
+        public void read(bool reader, string user_name)
         {
-            Console.WriteLine($"sach noi ve {noi_dung}");
+            if (reader)
+            {
+                Console.WriteLine($"doc gia {user_name} thuc hien doc: ");
+                Console.WriteLine($"sach noi ve {noi_dung}");
+            }
+            else
+            {
+                Console.WriteLine($"thu thu {user_name} thuc hien doc: ");
+                Console.WriteLine($"sach noi ve {noi_dung}");
+            }
         }
 
-        public void Save()
+        public void save(bool reader,string user_name)
         {
-            Console.WriteLine($"thuc hien luu sach boi tac gia {ten_tai_lieu}");
+            if(reader) Console.WriteLine($"doc gia {user_name} da thuc hien luu sach boi tac gia {tac_gia}"); 
+            else Console.WriteLine($"thu thu {user_name} da thuc hien luu sach boi tac gia {tac_gia}"); 
         }
 
         public void sua()
